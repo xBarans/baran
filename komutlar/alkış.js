@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 exports.run = function(client, message, args) {
   const embed = new Discord.RichEmbed()
-  .setAuthor("Alkış 👏\n")
+  .setAuthor("👏\n")
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
