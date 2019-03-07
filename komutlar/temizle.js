@@ -1,25 +1,15 @@
-const Discord = require('discord.js');
-exports.run = function(client, message, args) {
+const Discord = require("discord.js");
 
-  if (!message.guild) {
-    return message.author.send('`temizle` komutu sadece sunucularda kullanılabilir.');
-  }
-  let mesajsayisi = parseInt(args.join(' '));
-  if (mesajsayisi.length < 1) return message.channel.send('Kaç mesaj silmem gerektiğini belirtmedin.')
-  if (mesajsayisi > 100) return message.channel.send('100 adetden fazla mesaj silemem!');
-  message.channel.bulkDelete(mesajsayisi + 1);
-  message.channel.send(mesajsayisi +' adet mesaj sildim!')
-};
+module.exports.run = async (bot, message, args) => {
 
-exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: ['sil'],
-  permLevel: 2
-};
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Bunu yapmaya yetkin yok!");
+  if(!args[0]) return message.channel.send("no");
+  message.channel.bulkDelete(args[0]).then(() => {
+  message.channel.send(`Clear ${args[0]} messages.`).then(msg => msg.delete(2000));
+});
 
-exports.help = {
-  name: 'temizle',
-  description: 'Belirlenen miktar mesajı siler.',
-  usage: 'temizle <temizlenecek mesaj sayısı>'
-};
+}
+
+module.exports.help = {
+  name: "clear"
+}
