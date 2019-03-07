@@ -27,12 +27,6 @@ fs.readdir('./komutlar/', (err, files) => {
   });
 });
 
-client.on('guildMemberAdd', uye =&gt; {
-  const channel = uye.guild.channels.find('name', '💎-gelenler');
-  if (!channel) return;
-  channel.send(`Sunucuya hoş geldin, ${uye}`);
-});
-
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
@@ -88,6 +82,12 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
     msg.reply('Aleyküm selam');
   }
+});
+
+client.on('guildMemberAdd', uye =&gt; {
+  const channel = uye.guild.channels.find('name', '💎-gelenler');
+  if (!channel) return;
+  channel.send(`Sunucuya hoş geldin, ${uye}`);
 });
 
 client.elevation = message => {
