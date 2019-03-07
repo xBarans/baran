@@ -6,7 +6,7 @@ exports.run = function(client, message, args) {
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor("RANDOM")
-  .setImage("https://thumbs.gfycat.com/WarpedAdmiredCormorant-size_restricted.gif")
+  .setImage("https://tenor.com/view/alk%c4%b1%c5%9f-bravo-clap-tebrikler-helal-olsun-gif-12008387")
   /*
    * Takes a Date object, defaults to current date.
    */
