@@ -48,7 +48,7 @@ client.reload = command => {
 };
 //
 bot.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome-leave');
+    let channel = member.guild.channels.find('name', 'gelenler-gidenler');
     let memberavatar = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
