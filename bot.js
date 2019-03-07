@@ -46,54 +46,7 @@ client.reload = command => {
     }
   });
 };
-//
-bot.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'gelenler-gidenler');
-    let memberavatar = member.user.avatarURL
-        if (!channel) return;
-        let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField(':bust_in_silhouette: | name : ', `${member}`)
-        .addField(':microphone2: | Welcome!', `Welcome to the server, ${member}`)
-        .addField(':id: | User :', "**[" + `${member.id}` + "]**")
-        .addField(':family_mwgb: | Your are the member', `${member.guild.memberCount}`)
-        .addField("Name", `<@` + `${member.id}` + `>`, true)
-        .addField('Server', `${member.guild.name}`, true )
-        .setFooter(`**${member.guild.name}**`)
-        .setTimestamp()
 
-        channel.sendEmbed(embed);
-});
-
-bot.on('guildMemberAdd', member => {
-
-    console.log(`${member}`, "Sunucumuza katıldı!")
-
-});
-
-bot.on('guildMemberRemove', member => {
-    let channel = member.guild.channels.find('name', 'gelenler-gidenler');
-    let memberavatar = member.user.avatarURL
-        if (!channel) return;
-        let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField('Kullanıcı Adı:', `${member}`)
-        .addField('Sunucudan ayrıldı', ';(')
-        .addField('Bye Bye :(', 'Seni özleyeceğiz!')
-        .addField('Sunucuda ', `${member.guild.memberCount}` + " Kullanıcı var!")
-        .setFooter(`**${member.guild.name}`)
-        .setTimestamp()
-
-        channel.sendEmbed(embed);
-});
-
-bot.on('guildMemberRemove', member => {
-    console.log(`${member}` + "Sunucudan ayrıldı!" + `${member.guild.name}` + "Sending leave message now")
-    console.log("Leave Message Sent")
-});
-//
 client.load = command => {
   return new Promise((resolve, reject) => {
     try {
