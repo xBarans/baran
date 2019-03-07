@@ -33,8 +33,6 @@ client.on('guildMemberAdd', uye =&gt; {
   channel.send(`Sunucuya hoş geldin, ${uye}`);
 });
 
-
-
 client.reload = command => {
   return new Promise((resolve, reject) => {
     try {
