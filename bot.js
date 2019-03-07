@@ -84,12 +84,6 @@ client.on('message', msg => {
   }
 });
 
-client.on('guildMemberAdd', uye =&gt; {
-  const channel = uye.guild.channels.find('name', '💎-gelenler');
-  if (!channel) return;
-  channel.send(`Sunucuya hoş geldin, ${uye}`);
-});
-
 client.elevation = message => {
   if(!message.guild) {
 	return; }
