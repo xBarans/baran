@@ -81,20 +81,6 @@ client.unload = command => {
 
 
 client.on('message', msg => {
-  if (msg.content.toLowerCase() === '>davet') {
-    if (msg.channel.type !== 'dm') {
-      const ozelmesajkontrol = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(msg.author.username, msg.author.avatarURL)
-    .addField(msg.author.username, 'Özel mesajlarını kontrol et. :postbox:');
-    msg.channel.sendEmbed(ozelmesajkontrol) }
-      msg.author.sendMessage("Link: https://discordapp.com/oauth2/authorize?client_id=544926761922723840&scope=bot&permissions=8").then(message => console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] Gönderilen mesaj: ${message.content}`)).catch(console.error);
-  }
-});
-
-
-client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
     msg.reply('Aleyküm selam');
   }
