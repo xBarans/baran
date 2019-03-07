@@ -14,7 +14,7 @@ exports.run = (client, message) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Bot sürümü: v' + ayarlar.surum + ' Yapımcı: Barans \n\n_**BOTU EKLEMEK İÇİN LİNK:**_\n\nhttps://discordapp.com/oauth2/authorize?client_id=544926761922723840&scope=bot&permissions=8 \n_**Linkler:**_\n\n**Bot** sunucusunun davet linki: https://discord.gg/qwFBMF \n\n**:developed by Barans**');
+    .setDescription('Bot sürümü: v' + ayarlar.surum + ' Yapımcı: Barans \n\n_**BOTU EKLEMEK İÇİN LİNK:**_\n\nhttps://discordapp.com/oauth2/authorize?client_id=544926761922723840&scope=bot&permissions=8 \n_**Linkler:**_\n\n**Bot** sunucusunun davet linki: https://discord.gg/qwFBMF \n\n** developed by Barans**');
     return message.author.sendEmbed(pingozel)
 };
 
