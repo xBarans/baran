@@ -28,7 +28,7 @@ fs.readdir('./komutlar/', (err, files) => {
 });
 
 client.on('guildMemberAdd', uye =&gt; {
-  const channel = uye.guild.channels.find('name', 'gelen-giden');
+  const channel = uye.guild.channels.find('name', '💎-gelenler');
   if (!channel) return;
   channel.send(`Sunucuya hoş geldin, ${uye}`);
 });
