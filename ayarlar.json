@@ -3,6 +3,14 @@
   "prefix": ">",
   "sahip": "345993868795183104",
   "token": "BOT_TOKEN",
-  "surum": "0.8"
-  
+  "surum": "0.8",
+  "Server_ID": SERVER ID,
+  "Channel_ID": CHANNEL ID,
+  "Rounded": 1,
+  "Avatar_X": 720,
+  "Avatar_Y": 12,
+  "Text_X": 240,
+  "Text_Y": 100,
+  "Text_Color": "white"
 }
+
